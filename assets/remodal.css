@@ -1,0 +1,205 @@
+/*
+ *  Remodal - v1.1.0
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+  overflow: hidden;
+
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
+  display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+
+  display: none;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  overflow: auto;
+
+  text-align: center;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+
+  height: 100%;
+  margin-left: -0.05em;
+
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+
+  outline: none;
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+/*Code By Sagar Paul*/
+h2#ps_popup_title {
+
+        font: 40px Georgia,serif;
+
+        margin: 0 0 60px;
+
+        text-align: center;
+
+        text-transform: none;
+
+    }
+
+    .ps_popup_des:before {
+
+        content: '';
+
+        width: 300px;
+
+        height: 1px;
+
+        background: #b1b1b1;
+
+        position: absolute;
+
+        margin-top: -30px;
+
+        left: 50%;
+
+        margin-left: -150px;
+
+    }
+
+    .ps_popup_des {
+
+        text-align: center;
+
+        padding: 0 35px;
+
+        font: 400 16px 'Bk-Open sans',sans-serif;
+
+        color: #2DE8BF;
+
+        font-style: normal;
+
+        padding-bottom: 41px;
+
+    }
+
+    /*.popup_coupon {
+
+        position: relative;
+
+    }*/
+
+    .ps_popup_cupon_text {
+        top: 7px;
+        width: 355px;
+        left: 3px;
+        font: 400 18px/85px Arial,Helvetica,sans-serif;
+        color: #2DE8BF;
+        margin: 0 auto;
+
+    }
+
+
+
+    h3.ps_popup_social_link {
+
+        font: 16px Arial,Helvetica,sans-serif;
+
+        padding: 25px 0 12px;
+
+        margin: 0;
+
+        border-top: 0;
+
+        text-align: center;
+
+    }
+
+    ul.ps_popup_social {
+
+        margin: 0px !important;
+
+        padding: 0 !important;
+
+        text-align: center !important;
+
+    }
+
+    ul.ps_popup_social li {
+
+        display: inline-block;
+
+        vertical-align: bottom;
+
+        margin: 0 3px;
+
+        /* min-width: 60px; */
+
+        /* max-width: 80px; */
+
+        /* position: relative; */
+
+        /* float: none; */
+
+        /* text-align: center; */
+
+    }
+.ps_success { color: green; font-weight: bold; }
